@@ -35,5 +35,5 @@ services:
       - /etc/letsencrypt:/etc/letsencrypt:rw
       - /var/www/certbot:/var/www/certbot:rw
     # Comando mágico: Renueva y duerme 12 horas
-    entrypoint: "/bin/sh -c 'trap exit TERM; while :; do certbot renew; sleep 12h & wait $${!}; done;'"
+    entrypoint: "/bin/sh -c 'trap exit TERM; while :; do certbot renew --webroot -w /var/www/certbot; sleep 12h & wait $${!}; done;'"
 
