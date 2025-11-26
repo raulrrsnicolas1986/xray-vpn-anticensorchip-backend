@@ -1,6 +1,6 @@
 name: Deploy via SCP
 
-# ¿Cuándo se ejecuta? Al hacer push a la rama 'main' o 'master'
+# ¿Cuándo se ejecuta? Al hacer push a la rama 'master'
 on:
   push:
     branches: [ "main", "master" ]
