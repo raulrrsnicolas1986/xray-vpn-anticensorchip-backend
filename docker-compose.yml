@@ -5,6 +5,8 @@ services:
     container_name: xray-backend
     restart: always
     network_mode: "host" # Usa la red del host directo (Rendimiento puro)
+    cap_add:
+      - NET_BIND_SERVICE
     command: run -c /etc/xray/config.json
     environment:
       - XRAY_LOCATION_ASSET=/usr/local/share/xray/
