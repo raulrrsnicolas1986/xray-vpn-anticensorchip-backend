@@ -23,7 +23,7 @@ services:
     restart: always
     volumes:
       - ./nginx/html:/usr/share/nginx/html:ro
-      - ./nginx-conf:/etc/nginx/conf.d
+      - ./nginx/nginx-conf:/etc/nginx/conf.d
       - /var/www/certbot:/var/www/certbot:ro # Lee el reto de Certbot
     ports:
       - "127.0.0.1:8080:80" # Escucha en 8080 local (Xray hace fallback aquí)
