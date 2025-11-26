@@ -20,7 +20,7 @@ jobs:
         username: ${{ secrets.SSH_USER }}
         key: ${{ secrets.SSH_KEY }}
         port: 22  # ¡TU PUERTO SSH PERSONALIZADO!
-        source: "nginx.conf,Dockerfile,docker-compose.yml"
+        source: "docker-compose.yml,xray/*,nginx/*,cerbot/*"
         target: "~/vps-b-backend" # Carpeta destino en el VPS
 
     # 3. Conectarse por SSH y reiniciar Docker
