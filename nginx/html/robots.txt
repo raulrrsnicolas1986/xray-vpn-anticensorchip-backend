@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://itstudylab.us/sitemap.xml
