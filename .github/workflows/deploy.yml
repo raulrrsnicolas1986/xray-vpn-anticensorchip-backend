@@ -21,7 +21,7 @@ jobs:
         key: ${{ secrets.SSH_KEY }}
         port: 22  # ¡TU PUERTO SSH PERSONALIZADO!
         source: "nginx.conf,Dockerfile,docker-compose.yml"
-        target: "~/vps-f-secure" # Carpeta destino en el VPS
+        target: "~/vps-b-backend" # Carpeta destino en el VPS
 
     # 3. Conectarse por SSH y reiniciar Docker
     - name: Restart Docker
@@ -33,7 +33,7 @@ jobs:
         port: 22
         script: |
           # Entrar a la carpeta
-          cd ~/vps-f-secure
+          cd ~/vps-b-backend
           
           # Apagar contenedores viejos (si existen)
           docker compose down || true
