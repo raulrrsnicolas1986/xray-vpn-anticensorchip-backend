@@ -1,0 +1,12 @@
+# Ignorar carpeta de certificados
+certs/
+/certs
+
+# Ignorar archivos PEM sueltos por si acaso
+*.pem
+*.key
+*.crt
+
+# Ignorar logs
+*.log
+
