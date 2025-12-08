@@ -13,7 +13,7 @@ services:
       - XRAY_LOCATION_ASSET=/usr/local/share/xray/
     volumes:
       - ./xray/config.json:/etc/xray/config.json
-      - ./certs:/etc/letsencrypt/live/itstudylab.us:ro # Lee certificados del HOST
+      - ./xray-certs:/etc/letsencrypt/live/itstudylab.us:ro # Lee certificados del HOST
       - ./logs:/var/log/xray
 
   # NGINX: El Señuelo y Renovador
