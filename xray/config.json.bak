@@ -36,7 +36,7 @@
         "tlsSettings": {
           "serverName": "docs.itstudylab.us",
           "alpn": [
-            "http/1.1"
+          "http/1.1"
           ],
           "certificates": [
             {
@@ -46,17 +46,8 @@
           ]
         },
         "sockopt": {
-          "acceptProxyProtocol": true,
-          "tcpNoDelay": true
+          "acceptProxyProtocol": true
         }
-      },
-      "sniffing": {
-        "enabled": true,
-        "destOverride": [
-          "http",
-          "tls",
-          "quic"
-        ]
       }
     }
   ],
@@ -69,25 +60,6 @@
       "protocol": "blackhole",
       "tag": "block"
     }
-  ],
-  "policy": {
-    "levels": {
-      "0": {
-        "handshake": 4,
-        "connIdle": 300,
-        "uplinkOnly": 2,
-        "downlinkOnly": 5,
-        "statsUserUplink": false,
-        "statsUserDownlink": false,
-        "bufferSize": 4096
-      }
-    },
-    "system": {
-      "statsInboundUplink": false,
-      "statsInboundDownlink": false,
-      "statsOutboundUplink": false,
-      "statsOutboundDownlink": false
-    }
-  }
+  ]
 }
 
