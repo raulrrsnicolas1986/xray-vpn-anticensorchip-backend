@@ -17,7 +17,7 @@
         "decryption": "none",
         "fallbacks": [
           {
-            "dest": "nginx-decoy:80",
+            "dest": "nginx-decoy:8080",
             "xver": 0
           }
         ]
